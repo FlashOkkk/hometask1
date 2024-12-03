@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
+    #!/bin/bash
     sudo yum install -y epel-release
     sudo yum install -y nginx
     sudo setenforce 0
